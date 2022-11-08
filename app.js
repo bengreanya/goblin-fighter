@@ -29,6 +29,23 @@ formEl.addEventListener('submit', (e) => {
     goblins.push(newGoblin);
     displayGoblins();
 });
+
+function goblinClickHandler(goblinData) {
+    if (goblinData.hp <= 0) return;
+    if (Math.random() < 0.5) {
+        goblinData.hp--;
+        alert('you hit ' + goblinData.name);
+    } else {
+        alert('you tried to hit ' + goblinData.name + ' but missed');
+    }
+    if (Math.random() < 0.5) {
+        playerHP--;
+        alert(goblinData.name + ' hit you!');
+    } else {
+        alert(goblinData.name + ' tried but missed you!');
+    }
+    if (playerHP === 0);
+}
 /* Display Functions */
 function displayGoblins() {
     goblinsListEl.textContent = '';
