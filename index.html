@@ -31,13 +31,35 @@
         <main>
             <section>
                 <div class="kill-stats">
-                    <p>You Have Killed <span id="goblin-kills"> </span>Goblins!</p>
+                    <p>You Have Killed <span id="goblin-kills "> </span>Goblins!</p>
                 </div>
                 <div class="player">
                     <p>Your HP <span id="player-hp"> </span></p>
+                    <!-- <img id="player-img"
+                        src="......." -->
                 </div>
             </section>
-            <section></section>
+            <section>
+                <div class="goblin-form">
+                    <form>
+                        <label for="goblin-input">Create Goblin</label>
+                        <input name="goblin-name" id="goblin-name" type="text" />
+                        <button type="submit">New Goblin</button>
+                    </form>
+                    <div class="goblins">
+                        <div class="goblin">
+                            <p>Mean One</p>
+                            <p id="goblin-face-1">👺</p>
+                            <p id="goblin-hp-1"></p>
+                        </div>
+                        <div class="goblin">
+                            <p>Big Bad One</p>
+                            <p id="goblin-face-2">👺</p>
+                            <p id="goblin-hp-2"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>
