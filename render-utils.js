@@ -4,7 +4,7 @@ export function renderGoblin(goblinData) {
     const nameEl = document.createElement('p');
     const hpEl = document.createElement('p');
 
-    goblinsListEl.classList.add('goblin');
+    goblinEl.classList.add('goblin');
     nameEl.textContent = goblinData.name;
     hpEl.id = `goblin-face-${goblinData.id}`;
     hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
@@ -13,6 +13,6 @@ export function renderGoblin(goblinData) {
     if (goblinData.hp < 0) {
         goblinEl.classList.add('killed');
     }
-    goblinData.El.append(nameEl, faceEl, hpEl);
+    goblinEl.append(nameEl, faceEl, hpEl);
     return goblinEl;
 }
