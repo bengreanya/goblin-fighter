@@ -17,6 +17,7 @@ let killedGoblinCount = 0;
 /* Events */
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (playerHP <= 0) return;
     const data = new FormData(formEl);
     const goblinName = data.get('goblin-name');
 
