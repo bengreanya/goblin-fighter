@@ -7,6 +7,7 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 ## Making a plan
 
 1. **Make a drawing of your app. Simple "wireframes"**
+   ![wireframe](/assets/wireframe.png)
 1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
 1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
 1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
@@ -25,3 +26,30 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+### elements
+
+    -input for adding goblins (button)=>form
+    -span for tracking goblin hp
+    -span for tracking player hp
+    -goblin list div
+
+### State
+
+    -how many goblins killed
+    -player HP
+    -array of goblin hp
+    -current ID to create new goblins
+
+### events
+
+    -on click:
+        -possibly decrement player hp
+        -possibly decrement goblin hp
+        -update DOM with new goblin and farmer hp
+        -update stats with goblin kills
+    -on submit:
+        -clear DOM list
+        -loop through goblins
+        -render a new goblin element
+        -append each el to container el

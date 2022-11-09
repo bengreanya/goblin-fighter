@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Goblins!</h1>
+        </header>
 
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <section class="section-1">
+                <div class="kill-stats">
+                    <p>You Have Killed <span id="goblin-kills"> </span> Goblins!</p>
+                </div>
+                <div class="player">
+                    <p>Your HP: <span id="player-hp">5</span></p>
+                    <img id="player-img"
+                        src="./assets/player.jpg"/>
+                </div>
+            </section>
+            <section class="section-2">
+                <div class="goblin-form">
+                    <form>
+                        <label for="goblin-input">Create Goblin</label>
+                        <input name="goblin-name" id="goblin-name" type="text" />
+                        <button type="submit">New Goblin</button>
+                    </form>
+                    <div class="goblins">
+                        <!-- <div class="goblin">
+                            <p>Mean One</p>
+                            <p id="goblin-face-1">👺</p>
+                            <p id="goblin-hp-1"></p>
+                        </div>
+                        <div class="goblin">
+                            <p>Big Bad One</p>
+                            <p id="goblin-face-2">👺</p>
+                            <p id="goblin-hp-2"></p> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
