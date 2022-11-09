@@ -5,7 +5,7 @@ const goblinsListEl = document.querySelector('.goblins');
 const formEl = document.querySelector('form');
 const playerHPEl = document.querySelector('#player-hp');
 const goblinKillsEl = document.querySelector('#goblin-kills');
-const playerImg = document.querySelector('#player-img');
+const playerImgEl = document.querySelector('#player-img');
 /* State */
 const goblins = [
     { id: 1, name: 'Mean One', hp: 5 },
@@ -31,6 +31,7 @@ formEl.addEventListener('submit', (e) => {
 });
 
 function goblinClickHandler(goblinData) {
+    // console.log(goblinData);
     if (goblinData.hp <= 0) return;
     if (Math.random() < 0.5) {
         goblinData.hp--;
@@ -44,8 +45,20 @@ function goblinClickHandler(goblinData) {
     } else {
         alert(goblinData.name + ' tried but missed you!');
     }
-    if (playerHP === 0);
+    if (goblinData.hp === 0) {
+        killedGoblinCount++;
+    }
+
+    if (playerHP === 0) {
+        playerImgEl.classList.add('game-over');
+        alert('Game Over!');
+    }
+    playerHPEl.textContent = playerHP;
+    goblinKillsEl.textContent = killedGoblinCount;
+    renderGoblin(goblinData);
+    displayGoblins();
 }
+
 /* Display Functions */
 function displayGoblins() {
     goblinsListEl.textContent = '';
