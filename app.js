@@ -33,6 +33,7 @@ formEl.addEventListener('submit', (e) => {
 function goblinClickHandler(goblinData) {
     // console.log(goblinData);
     if (goblinData.hp <= 0) return;
+    if (playerHP <= 0) return;
     if (Math.random() < 0.5) {
         goblinData.hp--;
         alert('you hit ' + goblinData.name);
